@@ -24,7 +24,7 @@ function checkAndConvertEthAddressToSubstrateAddress(address) {
     return keyring.decodeAddress(address);
 }
 
-function changeAddressEncoding(address, toNetworkPrefix=42){
+function changeAddressEncoding(address, toNetworkPrefix=7){
     if(!address) {
         return null;
     }
@@ -55,7 +55,7 @@ router.get('/', async (req: any, res: Response, next: NextFunction) => {
     let { chain, amount } = req.query;
 
     const sender = req.ipInfo.ip;
-    const URL_TEST_NET = process.env.URL_TEST_NET || 'ws://beresheet1.edgewa.re:9944';
+    const URL_TEST_NET = process.env.URL_TEST_NET || 'wss://beresheet.jelliedowl.net';
     const tokenDecimals = Number(process.env.TOKEN_DECIMALS) || 18;
     
     const limit = Number(process.env.REQUEST_LIMIT) || 3;
@@ -76,7 +76,7 @@ router.get('/', async (req: any, res: Response, next: NextFunction) => {
             break;
         case 'edgeware-local':
         case 'beresheet':
-            networkPrefix = 42;
+            networkPrefix = 7;
             break
         default:
             networkPrefix = -1;

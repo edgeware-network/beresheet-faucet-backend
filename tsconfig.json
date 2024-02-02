@@ -15,8 +15,8 @@
     "target": "es2017",
     "moduleResolution": "node",
     "paths": {
-      "@polkadot/api/augment": ["./node_modules/@edgeware/node-types/interfaces/augment-api.d.ts"],
-      "@polkadot/types/augment": ["./node_modules/@edgeware/node-types/interfaces/augment-types.d.ts"],
+      "@polkadot/api/augment": ["./node_modules/@polkadot/api/augment.d.ts"],
+      "@polkadot/types/augment": ["./node_modules/@polkadot/types-augment/augment-types.d.ts"],
       "@daos/*": [
         "src/daos/*"
       ],

@@ -26,8 +26,8 @@
     "@server": "dist/Server"
   },
   "dependencies": {
-    "@edgeware/node-types": "3.6.2-wako",
-    "@polkadot/api": "^4.12.1",
+    "@polkadot/api": "10.11.2",
+    "@polkadot/types": "^10.11.2",
     "@types/cors": "^2.8.7",
     "@types/nedb": "^1.8.11",
     "command-line-args": "^5.1.1",
